@@ -1,0 +1,273 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+// reset.scss
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+ol,
+li,
+form,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+a,
+button {
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  /* font-family: Arial, sans-serif; */
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+$primary-bg: #574940;
+$secondary-bg: #a15805;
+
+.text-primary {
+  text-transform: uppercase;
+  color: $primary-bg;
+  font-weight: 600;
+}
+
+.btn-primary {
+  border: 1px solid transparent;
+  padding: 12px 20px;
+  background-color: $secondary-bg;
+  font-weight: 600;
+  box-shadow: 0px 4px 6px rgba(29, 28, 28, 0.601);
+}
+
+.btn-secondary {
+  border: 1px solid $primary-bg;
+  padding: 14px 20px;
+  font-weight: 600;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: $primary-bg;
+    color: #fff;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-home {
+  /* Header Menu  */
+  position: relative;
+  background-image: url("../images/8x24IDUFyL.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    right: 0;
+    left: 0;
+    background-color: #574940a1;
+  }
+
+  .header {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+
+    .content {
+      padding: 30px 0;
+      display: grid;
+      justify-content: space-between;
+      align-items: center;
+      grid-template-columns: auto 1fr;
+    }
+
+    &__logo {
+      font-size: 2rem;
+      font-weight: bolder;
+      color: #fff;
+    }
+
+    .navigation {
+      &__menu {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .menu-item {
+        &:nth-child(2n + 1) {
+          padding: 0 14px;
+        }
+
+        color: #fff;
+      }
+    }
+  }
+
+  /* Banner */
+  .banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    height: 650px;
+    justify-content: center;
+    width: 100%;
+
+    &__extra {
+      position: relative;
+
+      padding: 0 60px;
+      color: #fff;
+      line-height: 1.1;
+
+      /* display: flex;
+      flex-direction: column;
+      align-items: center; */
+      * {
+        margin: 20px 0;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 300;
+      }
+
+      h1 {
+        font-size: 3.8rem;
+
+        font-weight: 600;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__image {
+      display: flex;
+
+      position: relative;
+
+      img {
+        border-top-left-radius: 10rem;
+      }
+
+      z-index: 21;
+    }
+  }
+}
+
+.card {
+  padding: 40px 130px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+  }
+
+  &__image {
+    flex: 50%;
+    height: 500px;
+    display: flex;
+    border-radius: 3rem;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    flex: 50%;
+
+    h2 {
+      font-size: 3rem;
+      margin-top: 15px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #666565;
+      margin: 45px 0;
+    }
+
+    * {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* Work-office */
+
+/* Work commercial */
+
+.work-commercial {
+  .content {
+    flex-direction: row-reverse;
+    box-shadow: 0 1px 6px rgb(124, 124, 119);
+    border-radius: 1rem;
+  }
+}
+
+
+/* responsive style */
+
+
+
+@media (max-width: 640px) {}
+
+@media (max-width: 768px) {}
+
+@media (min-width: 1280px) {}
